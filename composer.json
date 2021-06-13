@@ -1,8 +1,8 @@
 {
-  "name": "Frago9876543210/MCPE-Proxy",
+  "name": "SkordertYT/Proxy",
   "description": "Proxy for a Minecraft BE. It allows you to intercept packets and send packets.",
   "type": "project",
-  "homepage": "https://github.com/Frago9876543210/MCPE-Proxy",
+  "homepage": "https://github.com/SkordertYT/Proxy",
   "license": "GPL-3.0",
   "require": {
 	"php": ">=7.2.0RC3",
