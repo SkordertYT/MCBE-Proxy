@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace proxy {
 
-	use pocketmine\utils\Config;
+	use proxy\Config;
 
 	const COMPOSER = 'vendor/autoload.php';
 
@@ -15,9 +15,10 @@ namespace proxy {
 		echo "[-] Composer autoloader not found." . PHP_EOL;
 		exit(1);
 	}
-
-	$config = new Config("config.yml", Config::YAML, [
-		'server-ip' => 'example.com',
+	
+	//change the ip in server.yml to your ipv4
+	$config = new Config("server.yml", Config::YAML, [
+		'server-ip' => '127.0.0.1',
 		'server-port' => 19132,
 		'interface' => '0.0.0.0',
 		'bind-port' => 19132,
