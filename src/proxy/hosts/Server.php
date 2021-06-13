@@ -35,6 +35,9 @@ class Server extends BaseHost{
 		if(!isset($this->data[1])){
 			$protocol = 440;//1.17.0
 		} else {
+                        if(!$this->data[1] == 440){
+                                $this->data[1] = 440;
+                        }
 			$protocol = $this->data[1];
 		}
 		return $protocol;
@@ -49,6 +52,9 @@ class Server extends BaseHost{
 		if(!isset($this->data[2])){
 			$version = "1.17.0";
 		} else {
+                        if(!$this->data[2] == "1.17.0"){
+                                $this->data[2] = "1.17.0";
+                        }
 			$version = $this->data[2];
 		}
 		return $version;
