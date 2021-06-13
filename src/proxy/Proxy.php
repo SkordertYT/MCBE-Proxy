@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace proxy;
 
-
 use pocketmine\{
-	network\mcpe\protocol\PacketPool, utils\Terminal
+	network\mcpe\protocol\PacketPool
 };
 use proxy\{
 	plugin\Plugin, utils\Address, utils\Log, utils\Packet
