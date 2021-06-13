@@ -31,7 +31,7 @@ class Server extends BaseHost{
 	 * @return string|null
 	 */
 	public function getProtocol() : ?string{
-		return isset($this->data[1]) ? $this->data[1] : null;
+		return 440; //1.17.0
 	}
 
 	/**
