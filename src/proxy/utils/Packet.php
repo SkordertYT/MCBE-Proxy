@@ -108,14 +108,14 @@ class Packet{
 	 * @internal param int $seqNumber
 	 */
 	public static function writeDataPacket(DataPacket $packet, BaseHost $baseHost) : void{
-		$batch = new BatchPacket;
+		$batch = new BatchPacket();
 		$batch->addPacket($packet);
 		$batch->setCompressionLevel(7);
 		$batch->encode();
-		$encapsulated = new EncapsulatedPacket;
+		$encapsulated = new EncapsulatedPacket();
 		$encapsulated->reliability = 0;
 		$encapsulated->buffer = $batch->buffer;
-		$dataPacket = new Datagram;
+		$dataPacket = new Datagram();
 		$dataPacket->seqNumber = self::$number++;
 		$dataPacket->packets = [$encapsulated];
 		$dataPacket->encode();
