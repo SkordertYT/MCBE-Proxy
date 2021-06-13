@@ -1,0 +1,5 @@
+name: ExamplePluginForProxy
+main: SkordertYT\Main
+version: 1.0
+author: SkordertYT
+Proxy: SkordertYTProxy

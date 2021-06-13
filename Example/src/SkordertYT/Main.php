@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Frago9876543210\Example;
-
+namespace SkordertYT;
 
 use pocketmine\network\mcpe\protocol\DataPacket;
 use pocketmine\network\mcpe\protocol\TextPacket;
@@ -15,7 +14,7 @@ class Main extends Plugin{
 	 * Called when the plugin is enabled
 	 */
 	public function onEnable() : void{
-		Log::Warn("I am loaded!");
+		Log::Warn("Enabled!");
 	}
 
 	/**
@@ -34,11 +33,10 @@ class Main extends Plugin{
 		if($packet instanceof TextPacket){
 			$packet->decode();
 			//way to create chat commands
-			if($packet->message === ".test"){
-				$this->proxy->getClient()->sendMessage("example message");
-				return false; //to cancel packet
+			if($packet->message === "*help"){
+				$this->proxy->getClient()->sendMessage("*connect (ip) (port)\nList Of Commands In How To Play");//need pack
+				return false;
 			}
 		}
 		return true;
 	}
-}

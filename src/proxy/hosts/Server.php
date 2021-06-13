@@ -31,7 +31,13 @@ class Server extends BaseHost{
 	 * @return string|null
 	 */
 	public function getProtocol() : ?string{
-		return isset($this->data[1]) ? $this->data[1] : null;
+		$protocol = 0;
+		if(!isset($this->data[1])){
+			$protocol = 440;//1.17.0
+		} else {
+			$protocol = $this->data[1];
+		}
+		return $protocol;
 	}
 
 	/**
@@ -39,6 +45,12 @@ class Server extends BaseHost{
 	 * @return string|null
 	 */
 	public function getVersion() : ?string{
-		return isset($this->data[2]) ? $this->data[2] : null;
+		$version = "0.0.0";
+		if(!isset($this->data[2])){
+			$version = "1.17.0";
+		} else {
+			$version = $this->data[2];
+		}
+		return $version;
 	}
 }
