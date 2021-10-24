@@ -156,7 +156,7 @@ class Proxy{
 		foreach(glob("plugins/*") as $file){
 			if(is_dir($file) && file_exists($yml_file = $file . "/" . "plugin.yml")){
 				$yml = yaml_parse_file($yml_file);
-				if(isset($yml["name"]) && isset($yml["main"]) && isset($yml["Proxy"]) && isset("version")){
+				if(isset($yml["name"]) && isset($yml["main"]) && isset($yml["Proxy"]) && isset($yml["version"]) && $yml["Proxy"] == "SkordertYTProxy){
 					Log::Info("Loading plugin \"" . $yml["name"] . "\"...");
 					if(file_exists($main = dirname($yml_file) . "/src/" . str_replace("\\", "/", $yml["main"]) . ".php")){
 						/** @noinspection PhpIncludeInspection */
